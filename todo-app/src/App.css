@@ -1,0 +1,170 @@
+/* Reset default margin and padding for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f8fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main App Container */
+.App {
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 25px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.App:hover {
+  transform: scale(1.02);
+}
+
+/* Header Style */
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Input Form Styles */
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px 15px;
+  width: 75%;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #4caf50;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+/* Filter Button Group */
+button + button {
+  margin-left: 10px;
+}
+
+button {
+  background-color: #007bff;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Task List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f6f9;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #e0e7ec;
+}
+
+span {
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+  flex: 1;
+}
+
+span.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+button.edit,
+button.delete {
+  background-color: transparent;
+  border: none;
+  color: #f31010;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+button.edit:hover,
+button.delete:hover {
+  color: #930b0b;
+}
+
+/* Responsive Styles */
+@media (max-width: 400px) {
+  .App {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  input {
+    width: 70%;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
